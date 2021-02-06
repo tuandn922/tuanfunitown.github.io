@@ -1,0 +1,141 @@
+.new-detail {
+    .detail-page {
+        .container-fluid {
+            .detail-top {
+            }
+        }
+        .new-detail--banner {
+            padding-top: 48px;
+            .container {
+                .row {
+                    .banner-img {
+                        a {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .banner-text {
+                        padding: 48px 0;
+                        h3 {
+                            @include text(20px, evi, 50px, #000, uppercase);
+                            letter-spacing: 3px;
+                            padding-bottom: 48px;
+                        }
+                        h4 {
+                            @include text(13px, arial, 22px, #000, uppercase);
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        }
+                        .date {
+                            font-style: italic;
+                            padding-bottom: 20px;
+                            padding: 48px 0;
+                        }
+                        p {
+                            @include text(13px, arial, 26px, #000, none);
+                        }
+                    }
+                }
+            }
+        }
+        .new-detail-content {
+            .container {
+                .row {
+                    .new-title {
+                        padding: 32px 0;
+                        text-align: center;
+                        h3 {
+                            @include text(13px, arial, 26px, #000, uppercase);
+                            font-weight: bold;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            width: 42%;
+                            height: 1px;
+                            left: 15px;
+                            background: #292929;
+                            top: 50%;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            width: 42%;
+                            height: 1px;
+                            right: 15px;
+                            background: #292929;
+                            top: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include mobile {
+    .new-detail {
+        .container-fluid {
+            .menu {
+                display: none;
+            }
+            .detail-top {
+                justify-content: space-between;
+                .left {
+                    display: none;
+                }
+                .right {
+                    a {
+                        img {
+                            margin: 0 5px 0 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .new-detail--banner {
+            .container {
+                .row {
+                    .col-md-12 {
+                        .banner-text {
+                            h3 {
+                                font-size: 14px;
+                                text-align: inherit;
+                                line-height: 40px;
+                            }
+                            h4 {
+                                font-size: 12px;
+                            }
+                            p {
+                                text-align: justify;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .new-detail-content {
+            .container {
+                .row {
+                    .new-title {
+                        &::after,  &::before {
+                            width: 20% !important;
+                        }
+                       
+                    }
+                }
+                .new-item {
+                    .content {
+                        a {
+                            h4 {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.footer {
+	padding-top: 100px;
+	background: $footter-cl;
+	.container {
+		position: relative;
+		.footer__top {
+			@include midflex();
+			.line {
+				height: 1px;
+				width: 50%;
+				background: #c48b2c;
+			}
+		}
+		.footer__infor {
+			padding: 60px 0 210px 0;
+			p {
+				@include text(12px, Arial, 26px, #fff, uppercase);
+				text-align: center;
+				a {
+					@include text(12px, Arial, 26px, #fff, uppercase);
+					text-align: center;
+				}
+			}
+		}
+		.backtotop {
+			position: absolute;
+			right: 0;
+			cursor: pointer;
+			bottom: 40px;
+			transition: transform 0.5s;
+			.line-back {
+				height: 132px;
+				width: 1px;
+				background:#c48b2c;
+				margin: 0 auto;
+			}
+			.text {
+				@include text(10px, Arial, 26px, #aaaaaa, uppercase);
+				writing-mode: vertical-rl;
+				margin-top: 20px				
+			}
+			&:hover {
+				.line-back {
+					transform: translateY(-10px);
+					transition: transform 0.5s;
+				}
+			}
+		}
+	}
+}

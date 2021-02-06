@@ -1,0 +1,137 @@
+.contact {
+    background: url(../../../img/contact/background.jpg) center no-repeat;
+    background-size: cover;
+    padding-bottom: 100px;
+    &-page {
+        .container-fluid {
+            .left {
+                ul {
+                    li {
+                        a {
+                            color: #fff;
+                            img {
+                                filter:inherit;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contact-body {
+            .container {
+                .row1 {
+                    h4 {
+                        @include text(12px, Pb, 18px, #947f4f, uppercase);
+                        letter-spacing: 1px;
+                    }
+                    p {
+                        @include text(12px, arial, 22px, #fff, none);
+                        padding: 25px 0;
+                    }
+                    .contact-me {
+                        padding-right: 150px;
+                    }
+                    .contact-detail {
+                        .detail-top {
+                            display: flex;
+                            .hotline {
+                                padding-right: 100px;
+                            }
+                        }
+                        .detail-bot {
+                            .address {
+                                p {
+                                    padding-right: 150px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .row2 {
+                    .enter-infor {
+                        padding-right: 150px;
+                        p {
+                            @include text(12px, arial, 22px, #fff, none);
+                        }
+                    }
+                }
+                .row3 {
+                    .form {
+                        &-group {
+                            label {
+                                display: block;
+                                @include text(12px, arial, 82px, #fff, none);
+                            }
+                            input {
+                                width: 100%;
+                                outline: none;
+                                border: none;
+                                border-bottom: 1px solid #947f4f;
+                                background: transparent;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .row4 {
+                    .btn-submit {
+                        text-align: center;
+                        .send {
+                            @include text(12px, Pb, 8px, #fff, uppercase);
+                            display: block;
+                            background: #000;
+                            color: #fff;
+                            border: 1px solid #947f4f;
+                            padding: 15px 40px;
+                            cursor: pointer;
+                            transition: all 0.2s;
+                            &:hover {
+                                background: #947f4f;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include mobile {
+    .contact {
+        &-page {
+            .container-fluid {
+                .menu {
+                    display: none;
+                }
+            }
+            .contact-body {
+                .container {
+                    .row1 {
+                        .contact-me {
+                            padding: 0;
+                        }
+                        .contact-detail {
+                            .detail-top {
+                                .hotline {
+                                    padding-right: 66px;
+                                }
+                                
+                            }
+                            .detail-bot {
+                                .address {
+                                    p {
+                                        padding: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .row2 {
+                        .enter-infor {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

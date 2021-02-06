@@ -1,0 +1,139 @@
+.servicepage {
+    .service-body {
+        padding-bottom: 100px;
+        .container {
+            .ser-top {
+                border-bottom: 1px solid #000;
+                .ser-title {
+                    h3 {
+                        @include text(32px, evi, 50px, #000, uppercase);
+                        letter-spacing: 3px;
+                        padding-bottom: 40px;
+                        text-align: center;
+                    }
+                }
+                .ser-img {
+                    a {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                .col-md-12 {
+                    padding: 0;
+                }
+                .ser-text {
+                    .row {
+                        .col-md-6 {
+                            .content {
+                                padding: 40px 0;
+
+                                h4 {
+                                    @include text(26px, evi, 50px, #000, uppercase);
+                                    letter-spacing: 2px;
+                                }
+                                p {
+                                    @include text(13px, fp, 26px, #000, none);
+                                }
+                                .desc {
+                                    padding: 40px 0 45px 0;
+                                }
+                            }
+                        }
+                        .btn-ser {
+                            padding-top: 130px;
+                        }
+                    }
+                }
+            }
+            .-bot {
+                padding-top: 80px;
+                p {
+                    @include text(13px, fp, 26px, #000, none);
+                    text-align: center;
+                    padding-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+@include mobile {
+    .servicepage {
+        .service-body {
+            .container {
+                .ser-top {
+                    .menu {
+                        display: none;
+                    }
+                    .ser-title {
+                        h3 {
+                            font-size: 26px;
+                        }
+                    }
+                    .ser-text {
+                        padding-bottom: 50px;
+                        .row {
+                            .col-md-6 {
+                                .content {
+                                    .desc {
+                                        padding: 20px 0 25px 0;
+                                        h4 {
+                                            font-size: 22px;
+                                            text-align: center;
+                                        }
+                                        p {
+                                            text-align: justify;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                            .col-md-6 {
+                                .btn-ser {
+                                    padding-top: 10px;
+                                    display: block;
+                                    .order {
+                                        padding: 0;
+                                        margin: auto;
+                                    }
+                                    .advisory {
+                                        padding-left: 0;
+                                        padding-top: 20px;
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .-bot {
+                    padding-top: 30px;
+                    h3 {
+                        padding-bottom: 20px;
+                    }
+                    p {
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}
+@include tablet {
+    .servicepage {
+        .service-body {
+            .container {
+               
+                .-bot {
+                    padding-top: 30px;
+                    h3 {
+                        padding-bottom: 20px;
+                    }
+                    p {
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,234 @@
+.products {
+    .container-fluid {
+        padding: 0;
+        .wrap {
+            .banner {
+                width: 100%;
+                height: 450px;
+                position: relative;
+                &-img {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        min-height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &-text {
+                    position: absolute;
+                    top: 50%;
+                    right: 15%;
+                    transform: translateY(-50%);
+                    width: fit-content;
+
+                    h2 {
+                        @include text(24px, fp, 50px, #fff, uppercase);
+                        text-align: right;
+                    }
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(4, 4, 4, 0.7);
+                }
+            }
+            .product-body {
+                padding: 90px 0 0 0;
+                .container {
+                    .product-item {
+                        .product-text {
+                            display: flex;
+                            align-items: center;
+                            .number {
+                                @include text(90px, evi, 135px, #c48b2c, uppercase);
+                            }
+                            .title {
+                                margin-left: 20px;
+                                h3 {
+                                    @include text(18px, evi, 40px, #000, uppercase);
+                                }
+                                p {
+                                    font-size: 13px;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+                        .product-img {
+                            .row {
+                                .image {
+                                    overflow: hidden;
+                                    position: relative;
+                                    a {
+                                        img {
+                                            width: 100%;
+                                            transform: scale(1);
+                                            transition: 0.5s;
+                                        }
+                                    }
+                                    &:hover {
+                                        a {
+                                            img {
+                                                transform: scale(1.1);
+                                            }
+                                        }
+                                    }
+                                }
+                                .content {
+                                    margin-top: 30px;
+                                    h4 {
+                                        @include text(18px, Pb, 40px, #000, uppercase);
+                                        margin-bottom: 5px;
+                                    }
+                                    span {
+                                        @include text(13px, fp, 22px, #000, uppercase);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .-more {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-top: 100px;
+                        a {
+                            @include text(12px, pb, normal, #000, uppercase);
+                            padding: 10px 15px;
+                            display: block;
+                            text-align: center;
+                            img {
+                                width: 25px;
+                                height: 18px;
+                                transform: rotate(90deg);
+                                position: relative;
+                                top: 0;
+                                display: block;
+                                transition: all 0.4s;
+                                margin-bottom: 15px;
+                            }
+                            &:hover {
+                                img {
+                                    top: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mobile {
+        .container-fluid {
+            .menu {
+                display: none;
+            }
+            .wrap {
+                .banner {
+                    height: 200px;
+                    width: 100%;
+                    &-img {
+                        height: 100%;
+                        a {
+                            img {
+                                max-width: 100%;
+                                min-height: 200%;
+                            }
+                        }
+                    }
+                    &-text {
+                        h2 {
+                            font-size: 13px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+                .product-body {
+                    padding-top: 20px;
+                    position: relative;
+                    .container {
+                        .product-item {
+                            .product-text {
+                                .number {
+                                    font-size: 60px;
+                                    line-height: 90px;
+                                }
+                                .title {
+                                    p {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            .product-img {
+                                .row {
+                                    .col-md-4 {
+                                        margin-bottom: 30px;
+                                    }
+                                    .content {
+                                        h4 {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .-more {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include tablet {
+    .products {
+        .container-fluid {
+            .wrap {
+                .banner {
+                    &-img {
+                        height: 100%;
+                        a {
+                            img {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                .product-body {
+                    padding-top: 20px;
+                    .container {
+                        .product-item {
+                            .product-text {
+                                margin-bottom: 30px;
+                                .number {
+                                    font-size: 60px;
+                                    line-height: 90px;
+                                }
+                                .title {
+                                    h3 {
+                                    }
+                                    p {
+                                    }
+                                }
+                            }
+                            .product-img {
+                                .row {
+                                    .col-md-4 {
+                                        margin-bottom: 30px;
+                                    }
+                                }
+                            }
+                        }
+                        .-more {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

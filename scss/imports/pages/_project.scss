@@ -1,0 +1,232 @@
+.project {
+    &-body {
+        padding-bottom: 100px;
+        .container {
+            padding-top: 100px;
+            .row {
+                .all-project {
+                    h3 {
+                        @include text(26px, evi, 50px, #000, uppercase);
+                        padding-bottom: 15px;
+                    }
+                    p {
+                        @include text(12px, arial, 26px, #000, none);
+                        padding-right: 150px;
+                    }
+                }
+                .col-sm-6 {
+                    position: relative;
+                    .select-wrap {
+                        right: 15px;
+                        position: absolute;
+                        padding-top: 60px;
+                        .default-option {
+                            width: 200px;
+                            height: 35px;
+                            background: #000;
+                            cursor: pointer;
+                            transition: all 0.3s;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            li {
+                                .option {
+                                    @include text(11px, arial, 20px, #fff, uppercase);
+                                    font-weight: bold;
+                                    display: flex;
+                                    align-items: center;
+                                    margin-left: 30px;
+                                    line-height: 35px;
+                                }
+                            }
+                            .option-icon {
+                                padding-right: 15px;
+                            }
+                            &:hover {
+                                background: #c48b2c;
+                            }
+                        }
+                        .select-ul {
+                            display: none;
+                            li {
+                                .option {
+                                    padding: 6px 0 6px 30px;
+                                    background: #6d5019;
+                                    border-bottom: 1px solid #151515;
+                                    cursor: pointer;
+                                    p {
+                                        @include text(11px, arial, 20px, #fff, uppercase);
+                                        font-weight: bold;
+                                    }
+                                    &:hover {
+                                        background: #c48b2c;
+                                    }
+                                }
+                            }
+                        }
+                        &.active {
+                            .default-option {
+                                img {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                            .select-ul {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            hr {
+                margin: 50px 0;
+            }
+            .project-list {
+                .project-item {
+                    padding-bottom: 50px;
+                    .image {
+                        position: relative;
+                        overflow: hidden;
+                        a {
+                            img {
+                                transform: scale(1);
+                                @include transition(all 0.3s);
+                            }
+                        }
+                    }
+                    .content {
+                        background: #fff;
+                        @include transition(all 0.3s);
+                        padding: 0 15px;
+                        a {
+                            h4 {
+                                font-size: 13px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .image {
+                            a {
+                                img {
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                        .content {
+                            background: #6d5019;
+                            h4,
+                            a {
+                                color: #fff;
+                            }
+                        }
+                        .btn-detail {
+                            a {
+                                img {
+                                    filter: invert(100%) sepia(97%) saturate(13%) hue-rotate(253deg) brightness(102%)
+                                        contrast(100%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pagination {
+                ul {
+                    @include midflex();
+                    li {
+                        margin: 0 4px;
+                        a {
+                            padding: 8px 14px;
+                            &:hover {
+                                border: 1px solid #ddd;
+                                background: #ebebeb;
+                                color: #c48b2c;
+                            }
+                        }
+                        .active {
+                            border: 1px solid #ddd;
+                            background: #ebebeb;
+                            color: #c48b2c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include mobile {
+    .project {
+        .menu {
+            display: none;
+        }
+        &-body {
+            .container {
+                padding-top: 30px;
+                .row {
+                    .all-project {
+                        .caption {
+                            h3 {
+                                font-size: 22px;
+                            }
+                            p {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                    .col-sm-6 {
+                        .box-option {
+                            padding-top: 52px;
+                        }
+                    }
+                }
+                .project-list {
+                    .col-md-4 {
+                        .project-item {
+                            padding: 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include tablet {
+    .project {
+        .menu {
+            display: none;
+        }
+        &-body {
+            .container {
+                .row {
+                    .all-project {
+                        .caption {
+                            p {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include desktop {
+    .project {
+        .menu {
+            display: none;
+        }
+        &-body {
+            .container {
+                .row {
+                    .all-project {
+                        .caption {
+                            p {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
